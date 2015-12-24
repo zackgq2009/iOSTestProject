@@ -3,8 +3,11 @@
 //  MaxLeap
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#ifdef EXTENSION_IOS
+#   import <MaxLeapExt/MLConstants.h>
+#else
+#   import <MaxLeap/MLConstants.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -87,7 +90,7 @@ typedef NS_ENUM(NSUInteger, MLInAppMessageDismissButtonLocation){
 
 #pragma mark - In-App Message Debugging
 + (void)triggerInAppMessage:(NSString *)triggerName;
-+ (void)triggerInAppMessage:(NSString *)triggerName withAttributes:(nullable NSDictionary<NSString*, NSString*> *)attributes;
++ (void)triggerInAppMessage:(NSString *)triggerName withAttributes:(nullable NSDictionary ML_GENERIC(NSString*, NSString*) *)attributes;
 
 + (void)dismissCurrentInAppMessage;
 

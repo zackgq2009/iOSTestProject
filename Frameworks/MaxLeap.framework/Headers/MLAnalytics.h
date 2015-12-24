@@ -4,7 +4,11 @@
 //
 
 
-#import <Foundation/Foundation.h>
+#ifdef EXTENSION_IOS
+#   import <MaxLeapExt/MLConstants.h>
+#else
+#   import <MaxLeap/MLConstants.h>
+#endif
 
 @class SKPaymentTransaction;
 
@@ -64,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param name       The name of the custom event.
  *  @param parameters The dictionary of additional information for this event.
  */
-+ (void)trackEvent:(NSString *)name parameters:(nullable NSDictionary<NSString*, NSString*> *)parameters;
++ (void)trackEvent:(NSString *)name parameters:(nullable NSDictionary ML_GENERIC(NSString*, NSString*) *)parameters;
 
 /**
  *  Tracks the occurrence of a custom event with additional parameters.<br>
@@ -83,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param parameters The dictionary of additional information for this event.
  *  @param count      The number of this event occurred.
  */
-+ (void)trackEvent:(NSString *)name parameters:(nullable NSDictionary<NSString*, NSString*> *)parameters count:(int)count;
++ (void)trackEvent:(NSString *)name parameters:(nullable NSDictionary ML_GENERIC(NSString*, NSString*) *)parameters count:(int)count;
 
 #pragma mark -
 /** @name Page View Analytics */

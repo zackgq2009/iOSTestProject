@@ -207,7 +207,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param filePaths The remote paths of files to delete.
  *  @param block     The block should have the following argument signature: (BOOL success, NSError *error)
  */
-+ (void)deleteAllInBackground:(nullable NSArray<NSString*> *)filePaths block:(void (^)(BOOL isAllDeleted, NSArray<NSString*> *deleted, NSError *__nullable error))block;
++ (void)deleteAllInBackground:(nullable NSArray ML_GENERIC(NSString*) *)filePaths
+                        block:(void (^)(BOOL isAllDeleted, NSArray ML_GENERIC(NSString*) *deleted, NSError *__nullable error))block;
 
 #pragma mark -
 /*! @name Get Metadata of a Private File */
@@ -264,7 +265,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param dstPaths        An orderedSet of destination remote path. These paths must match with scrPaths.
  *  @param block           Block should have the following argument signature: (BOOL isAllCompleted, NSArray *completed, NSError *error)
  */
-+ (void)copyAllInBackground:(nullable NSArray<NSString*> *)scrPaths toPaths:(nullable NSOrderedSet<NSString*> *)dstPaths block:(void(^)(BOOL isAllCompleted, NSArray<NSString*> *completed, NSError *__nullable error))block;
++ (void)copyAllInBackground:(nullable NSArray ML_GENERIC(NSString*) *)scrPaths
+                    toPaths:(nullable NSOrderedSet ML_GENERIC(NSString*) *)dstPaths
+                      block:(void(^)(BOOL isAllCompleted, NSArray ML_GENERIC(NSString*) *completed, NSError *__nullable error))block;
 
 #pragma mark -
 /*! @name Move Private Files */
@@ -285,7 +288,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param dstPaths        An orderedSet of destination remote path. These paths must match with `scrPaths`.
  *  @param block           Block should have the following argument signature: (BOOL isAllCompleted, NSArray *completed, NSError *error)
  */
-+ (void)moveAllInBackground:(nullable NSOrderedSet<NSString*> *)scrPaths toPaths:(nullable NSOrderedSet<NSString*> *)dstPaths block:(void(^)(BOOL isAllCompleted, NSArray<NSString*> *completed, NSError *__nullable error))block;
++ (void)moveAllInBackground:(nullable NSOrderedSet ML_GENERIC(NSString*) *)scrPaths
+                    toPaths:(nullable NSOrderedSet ML_GENERIC(NSString*) *)dstPaths
+                      block:(void(^)(BOOL isAllCompleted, NSArray ML_GENERIC(NSString*) *completed, NSError *__nullable error))block;
 
 #pragma mark -
 /*! @name Create Folder */

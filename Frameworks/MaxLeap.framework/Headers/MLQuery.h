@@ -80,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param keys The keys to include in the result.
  */
-- (void)selectKeys:(NSArray<NSString*> *)keys;
+- (void)selectKeys:(NSArray ML_GENERIC(NSString*) *)keys;
 
 /*!
  Add a constraint that requires a particular key exists.
@@ -265,7 +265,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param queries The list of queries to or together.
  @return a MLQuery that is the `OR` of the passed in MLQuerys.
  */
-+ (nullable MLQuery *)orQueryWithSubqueries:(nullable NSArray<MLQuery*> *)queries;
++ (nullable MLQuery *)orQueryWithSubqueries:(nullable NSArray ML_GENERIC(MLQuery*) *)queries;
 
 /*!
  Returns a MLQuery that is the `AND` of the passed in MLQuerys.
@@ -273,7 +273,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param queries The list of queries to or together.
  @return a MLQuery that is the `AND` of the passed in MLQuerys.
  */
-+ (nullable MLQuery *)andQueryWithSubqueries:(nullable NSArray<MLQuery*> *)queries;
++ (nullable MLQuery *)andQueryWithSubqueries:(nullable NSArray ML_GENERIC(MLQuery*) *)queries;
 
 /*!
  Return a query with negated conditions of the receiver.
@@ -359,7 +359,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param sortDescriptors An NSArray of NSSortDescriptor instances to order by.
  */
-- (void)orderBySortDescriptors:(nullable NSArray<NSSortDescriptor*> *)sortDescriptors;
+- (void)orderBySortDescriptors:(nullable NSArray ML_GENERIC(NSSortDescriptor*) *)sortDescriptors;
 
 #pragma mark -
 #pragma mark Pagination properties

@@ -31,22 +31,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The e-mail receivers
  */
-@property (nonatomic, strong) NSArray<NSString*> *to;
+@property (nonatomic, strong) NSArray ML_GENERIC(NSString*) *to;
 
 /**
  * The arguments in email subject, defined in the template.
  */
-@property (nonatomic, strong, nullable) NSDictionary<NSString*, NSString*> *subjectArgs;
+@property (nonatomic, strong, nullable) NSDictionary ML_GENERIC(NSString*, NSString*) *subjectArgs;
 
 /**
  * The text arguments
  */
-@property (nonatomic, strong, nullable) NSDictionary<NSString*, NSString*> *textArgs;
+@property (nonatomic, strong, nullable) NSDictionary ML_GENERIC(NSString*, NSString*) *textArgs;
 
 /**
  * The html arguments
  */
-@property (nonatomic, strong, nullable) NSDictionary<NSString*, NSString*> *htmlArgs;
+@property (nonatomic, strong, nullable) NSDictionary ML_GENERIC(NSString*, NSString*) *htmlArgs;
 
 /**
  * Create an email with the templateName.

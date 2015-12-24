@@ -249,3 +249,13 @@ typedef void (^MLUsageResultBlock)(NSInteger fileCount, long usedCapacity, NSErr
 #    define ML_EXTENSION_UNAVAILABLE(_msg)
 #  endif
 #endif
+
+///--------------------------------------
+/// @name Obj-C Generics Macros
+///--------------------------------------
+
+#if __has_feature(objc_generics) || __has_extension(objc_generics)
+#  define ML_GENERIC(...) <__VA_ARGS__>
+#else
+#  define ML_GENERIC(...)
+#endif

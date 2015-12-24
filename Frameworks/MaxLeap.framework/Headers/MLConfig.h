@@ -195,7 +195,7 @@ typedef void (^MLConfigValueChangedBlock)(id __nullable newValue, id __nullable 
  *  @param keys  The keys to get, pass `nil` to get all key-values.
  *  @param block The block to execute. It should have the following argument signature: `^(MLConfig *config, NSError *error)`.
  */
-+ (void)getValuesForKeys:(nullable NSArray<NSString*> *)keys inBackgroundWithBlock:(nullable MLConfigResultBlock)block;
++ (void)getValuesForKeys:(nullable NSArray ML_GENERIC(NSString*) *)keys inBackgroundWithBlock:(nullable MLConfigResultBlock)block;
 
 ///--------------------------------------
 /// @name Observe Config Changes

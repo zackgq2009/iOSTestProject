@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param dictionary An NSDictionary of keys and objects to set on the new MLObject.
  @return A MLObject with the given class name and set with the given data.
  */
-+ (instancetype)objectWithClassName:(NSString *)className dictionary:(nullable NSDictionary<NSString*, id> *)dictionary;
++ (instancetype)objectWithClassName:(NSString *)className dictionary:(nullable NSDictionary ML_GENERIC(NSString*, id) *)dictionary;
 
 /*!
  Initializes a new MLObject with a class name.
@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  Returns an array of the keys contained in this object. This does not include createdAt, updatedAt, authData, or objectId. It does include things like username and ACL.
  */
-- (NSArray<NSString*> *)allKeys;
+- (NSArray ML_GENERIC(NSString*) *)allKeys;
 
 
 
@@ -266,7 +266,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param objects The array of objects to save.
  @param block The block to execute. The block should have the following argument signature: (BOOL succeeded, NSError *error)
  */
-+ (void)saveAllInBackground:(nullable NSArray<MLObject *> *)objects
++ (void)saveAllInBackground:(nullable NSArray ML_GENERIC(MLObject *) *)objects
                       block:(nullable MLBooleanResultBlock)block;
 
 #pragma mark -
@@ -289,7 +289,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param objects The array of objects to delete.
  @param block The block to execute. The block should have the following argument signature: (BOOL succeeded, NSError *error)
  */
-+ (void)deleteAllInBackground:(nullable NSArray<MLObject *> *)objects
++ (void)deleteAllInBackground:(nullable NSArray ML_GENERIC(MLObject *) *)objects
                         block:(nullable MLBooleanResultBlock)block;
 
 #pragma mark -
@@ -320,7 +320,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param objects An NSArray of MLObjects.
  *  @param block   The block to execute. The block should have the following argument signature: (NSArray *objects, NSError *error)
  */
-+ (void)fetchAllInBackground:(nullable NSArray<MLObject *> *)objects
++ (void)fetchAllInBackground:(nullable NSArray ML_GENERIC(MLObject *) *)objects
                        block:(nullable MLArrayResultBlock)block;
 
 /**
@@ -329,7 +329,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param objects The list of objects to fetch.
  *  @param block   The block to execute. The block should have the following argument signature: (NSArray *objects, NSError *error)
  */
-+ (void)fetchAllIfNeededInBackground:(nullable NSArray<MLObject *> *)objects
++ (void)fetchAllIfNeededInBackground:(nullable NSArray ML_GENERIC(MLObject *) *)objects
                                block:(nullable MLArrayResultBlock)block;
 
 @end
