@@ -20,9 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [MaxLeap setApplicationId:@"5552f51660b2056aa87dd9e0" clientKey:@"c3JscE50TWNnVzg4SkZlUnFsc3E2QQ" site:MLSiteUS];
+//    [MaxLeap setApplicationId:@"5552f51660b2056aa87dd9e0" clientKey:@"c3JscE50TWNnVzg4SkZlUnFsc3E2QQ" site:MLSiteUS];
 //#error 需要填写中国区应用的 appId 和 key，填写完毕后把本行注释掉或者删掉
-//    [MaxLeap setApplicationId:@"中国区应用的ID" clientKey:@"Key" site:MLSiteCN];
+    [MaxLeap setApplicationId:@"567b5237e9db730001cb7658" clientKey:@"SUQ0V0FNS1lrZjA3THBEbGlTbzlTdw" site:MLSiteCN];
     return YES;
 }
 

@@ -8,6 +8,7 @@
 
 #import "ItemListViewController.h"
 #import "DataManager.h"
+#import <MaxLeap/MaxLeap.h>
 
 @interface ItemListViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *itemIds;
@@ -50,6 +51,7 @@
     NSString *reuseId = indexPath.section==0?@"coinCell":@"itemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
     
+    [MLAnalytics trackEvent:@"name" parameters:@{@"key":@"value",@"key2":@"value2"} count:1];
     // Configure the cell...
     if (indexPath.section == 0) {
         cell.textLabel.text = [NSString stringWithFormat:@"coins: %ld", (long)[DataManager sharedManager].coins];
@@ -87,6 +89,9 @@
         [[alert textFieldAtIndex:0] setText:@"1"];
         [alert show];
     }
+    
+    
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
