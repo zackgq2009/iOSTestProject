@@ -156,4 +156,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+FOUNDATION_EXPORT NSString * const MLPaySourceAli;
+FOUNDATION_EXPORT NSString * const MLPaySourceAliApp;
+FOUNDATION_EXPORT NSString * const MLPaySourceWeiXin;
+FOUNDATION_EXPORT NSString * const MLPaySourceWeiXinApp;
+FOUNDATION_EXPORT NSString * const MLPaySourcePaypal;
+FOUNDATION_EXPORT NSString * const MLPaySourceAppStore;
+FOUNDATION_EXPORT NSString * const MLPaySourceAmazon;
+FOUNDATION_EXPORT NSString * const MLPaySourceUnion;
+FOUNDATION_EXPORT NSString * const MLPaySourceUnionApp;
+
 NS_ASSUME_NONNULL_END
